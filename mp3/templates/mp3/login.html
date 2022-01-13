@@ -1,0 +1,133 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -7%; margin-bottom: -top: -12%;">
+	<a href="#" style=" font-style: times; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+    {% for message in messages %}
+          <p id="messages">{{message}}</p>
+        {% endfor %}  
+<form action="" method="post">
+  {% csrf_token %}
+  <div class="imgcontainer">
+    <img src="{% static 'images/login.png' %}" alt="Avatar" class="avatar">
+  </div>
+
+
+    <label for="uname" style="color: black"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw" style="color: black"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+</form>
+  </section>
+        <!-- Banner-Starts-Here -->
+
+
+
+
+ 
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+ 
+        
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!-- //Body-Ends-Here -->
+<style type="text/css">
+  /* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: skyblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+</style>
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>

@@ -1,0 +1,90 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -8%; margin-bottom: -top: -8%;">
+	<a href="#" style=" font-style: Cambria; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+    <div style="overflow-x:auto;">
+    <table class="table">
+    <a class="btn btn-primary  btn-sm btn-info" href="{% url 'add' %}">add song</a>
+    <a class="btn btn-primary  btn-sm btn-info" href="{% url 'DeleteSong' %}">delete song</a>
+    <a class="btn btn-primary  btn-sm btn-info" href="{% url 'Logout' %}">logout</a><br><br>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">message</th>
+      <th scope="col">date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for contact in contact %}
+    <tr>
+         <td>{{contact.id}}</td>      
+          <td>{{contact.name}}</td>
+          <td>{{contact.email}}</td>
+          <td>{{contact.message}}</td>
+          <td>{{contact.date_created}}</td>
+
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+    {% if trend.has_previous %}
+                    <a class="btn btn-sm btn-info" href="?page=1">&laquo; first</a>
+                    <a class="btn btn-sm btn-info" href="?page={{ trend.number}}">{{trend.number}}</a>
+                    <a class="btn btn-sm btn-info" href="?page={{ trend.previous_page_number }}">previous</a>
+                {% endif %}
+
+
+                {% if trend.has_next %}
+                    <a class="btn btn-sm btn-info" href="?page={{ trend.number}}">{{trend.number}}</a>
+                    <a class="btn btn-sm btn-info" href="?page={{ trend.next_page_number }}">{{trend.next_page_number}}</a>
+                    <a class="btn btn-sm btn-info" href="?page={{ trend.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+  </section>
+        <!-- Banner-Starts-Here -->
+
+
+
+
+ 
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+ 
+        
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>

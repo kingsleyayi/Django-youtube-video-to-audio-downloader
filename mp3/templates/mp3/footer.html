@@ -1,0 +1,121 @@
+        <div class="footer" style="background-color: lightgray;">
+		<style type="text/css">
+			.footer {
+			    background-color: #333;
+			    margin-bottom: 80px;
+			    text-align: center;
+			    -webkit-box-shadow: 1px 20px 135px 13px rgba(0,0,0,0.75);
+			    -moz-box-shadow: 1px 20px 135px 13px rgba(0,0,0,0.75);
+			    box-shadow: 1px 20px 135px 13px rgba(0,0,0,0.75);
+			}
+			.social {
+			    padding: 30px 0 20px 0;
+			}
+
+			ul.social li {
+			    display: inline-block;
+			}
+			ul.social li a {
+			    display: inline-block;
+			    width: 50px;
+			    height: 50px;
+			    background: url("https://mp3kings-bucket.s3.us-east-2.amazonaws.com/images/img-sprite.png") no-repeat 0px 0px;
+			}
+			ul.social li a.facebook {
+			    background-position: 0px 0px;
+			}
+			ul.social li a.facebook:hover {
+			    background-position: 0px -50px;
+			}
+			ul.social li a.twitter {
+			    background-position: -50px 0px;
+			}
+			ul.social li a.twitter:hover {
+			    background-position: -50px -50px;
+			}
+			ul.social li a.googleplus {
+			    background-position: -100px 0px;
+			}
+			ul.social li a.googleplus:hover {
+			    background-position: -100px -50px;
+			}
+			ul.social li a.instagram {
+			    background-position: -150px 0px;
+			}
+			ul.social li a.instagram:hover {
+			    background-position: -150px -50px;
+			}
+			ul.social li a.youtube {
+			    background-position: -200px 0px;
+			}
+			ul.social li a.youtube:hover {
+			    background-position: -200px -50px;
+			}
+			ul.social li a.itunes {
+			    background-position: -250px 0px;
+			}
+			ul.social li a.itunes:hover {
+			    background-position: -250px -50px;
+			}
+
+			.copyright {
+			    padding: 0 0 30px 0;
+			    text-align: center;
+			}
+			.copyright p {
+			    font-size: 18px;
+			    font-family: 'Oswald-Light';
+			    color: #FFF;
+			}
+			.copyright a {
+			    color: #FFF;
+			    text-decoration: none;
+			}
+			.copyright a:hover {
+			    color: #B3CD9E;
+			    text-decoration: underline;
+			}
+
+			#toTop {
+			    display: none;
+			    text-decoration: none;
+			    position: fixed;
+			    bottom: 10px;
+			    right: 10px;
+			    overflow: hidden;
+			    width: 48px;
+			    height: 48px;
+			    border: none;
+			    text-indent: 100%;
+			    background: url("../images/to-top2.png") no-repeat 0px 0px;
+			}
+		</style>
+
+            <ul class="social" id="follow">
+                <li><a href="#" class="facebook" title="Go to Our Facebook Page"></a></li>
+                <li><a href="#" class="instagram" title="Go to Our Instagram Account"></a></li>
+                <li><a href="#" class="youtube" title="Go to Our Youtube Channel"></a></li>
+            </ul>
+
+            <div class="copyright">
+                <p>&copy; all rigths reserved mp3kings.net</p>
+                
+            </div>
+
+            <script type="text/javascript">
+				$(document).ready(function() {
+					/*
+						var defaults = {
+							containerID: 'toTop', // fading element id
+							containerHoverID: 'toTopHover', // fading element hover id
+							scrollSpeed: 1200,
+							easingType: 'linear' 
+						};
+					*/
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+            </script>
+			
+            <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+        </div>

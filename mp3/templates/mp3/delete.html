@@ -1,0 +1,129 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -8%; margin-bottom: -top: -8%;">
+	<a href="#" style=" font-style: Cambria; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+      <a href="{% url 'Logout' %}"  class="btn btn-primary  btn-sm btn-info">Logout</a>
+     <a class="btn btn-primary  btn-sm btn-info" href="{% url 'Messages' %}">messages</a>
+     <a class="btn btn-primary  btn-sm btn-info" href="{% url 'add' %}">add song</a>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<div style="overflow-x:auto;">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:10%;">id</th>
+    <th style="width:30%;">name</th>
+    <th style="width:40%;">audio</th>
+    <th style="width:20%;">delete</th>
+  </tr>
+    {% for music in music %}
+      <tr>
+        <td>{{music.id}}</td>
+        <td>{{music.name}}</td>
+        <td>{{music.audio}}</td>
+        <td><a class="btn btn-primary  btn-sm btn-danger" href="{% url 'confirm' music.id %}">delete song</a></td>
+      </tr>
+
+    {% endfor %}
+   </table>
+ </div>
+  </section>
+  <style type="text/css">
+    #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+  </style>
+  <script type="text/javascript">
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+        <!-- Banner-Starts-Here -->
+
+
+
+
+ 
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+ 
+        
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>

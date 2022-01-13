@@ -1,0 +1,1 @@
+web: gunicorn mp3kings.wsgi --log-file -

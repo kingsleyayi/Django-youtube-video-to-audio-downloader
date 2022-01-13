@@ -1,0 +1,117 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+	<script type="text/javascript" src="//boyaidare.club/fy6TtHWlhLI9DPpg/21002"></script>
+<!-- Body-Starts-Here -->
+<div id="grad1">
+ 
+<section class="jumbotron text-center" style="background: none; margin-bottom: -7%; margin-bottom: -top: -12%;">
+	<a href="#" style=" font-style: times; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+    
+
+    <div class="container">
+      <h2 class="jumbotron-heading">Search music </h2>
+      <p class="lead text-muted">download top sound quality available without a loss in sound quality</p>
+      <form method="GET" action="{% url 'search' %}">
+      <div class="input-group mb-3">
+          {% csrf_token %}
+        <input name = "search" type="text" class="form-control" aria-label="Username">
+        
+      </div>
+      <p>
+        <button type="submit" name="submit" class="btn btn-primary my-2">Search</button>
+   </p>
+          {% for video in videos %}
+	  <br><a href="https://ofgogoatan.com/afu.php?zoneid=3153331" target="_blank" style="color: black"> <input  type="hidden" name="link" value="{{video.url}}" readonly><br></a>
+	   <a href="https://ofgogoatan.com/afu.php?zoneid=3153331" target="_blank" style="color: black"><span><b>name : </b>{{video.title}}</span><br></a>
+	   <a href="https://ofgogoatan.com/afu.php?zoneid=3153331" target="_blank" style="color: black"><span><b>length : </b>{{video.duration}} mins</span><br></a>
+          <a href="https://ofgogoatan.com/afu.php?zoneid=3153331" target="_blank" style="color: black"><span><b>Quality : </b> download Link 1 (128kbps)</span><br></a>
+	    <!--      <iframe class="yo" style="background-color: royalblue;" src="//www.recordmp3.co/#/watch?v={{video.id}}&layout=button"><noscript>
+	    </iframe> 
+
+	   <iframe class="yeah" style="width:50%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;" src="//ytmp3.mobi/button-api/#{{video.id}}|mp3|BG_COLOR|TEXT_COLOR" scrolling="no" style="border:none" >
+	   </iframe>
+	    
+	    <iframe class="yeah" src="//mp4s.org/api/button/?v={{video.id}}&f=audio&bc=Background-Color&fc=Font-Color" width="50%" height="50%" allowtransparency="true" scrolling="no" style="border:none"></iframe>
+<iframe class="yeah" style="width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;" src="//ytmp3.mobi/button-api/#{{video.id}}|mp3|BG_COLOR|TEXT_COLOR" scrolling="no" style="border:none"></iframe>	  
+
+
+<iframe src="https://api.youtube-mp3.org.in/widget/button/audio/{{video.id}}" frameborder="0" style="width: 160px; height: 50px;"></iframe>
+	    	    	    <iframe class="yeah" src="//mp4s.org/api/button/?v={{video.id}}&f=audio&bc=Background-Color&fc=Font-Color" width="50%" height="50%" allowtransparency="true" scrolling="no" style="border:none"></iframe>
+	
+--> 
+ <iframe class="yeah" style="width:50%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden;" src="//ytmp3.mobi/button-api/#{{video.id}}|mp3|BG_COLOR|TEXT_COLOR" scrolling="no" style="border:none" >
+	   </iframe><br><a href="https://ofgogoatan.com/afu.php?zoneid=3153331" target="_blank" style="color: black"><span><b>Quality : </b>Download Link 2 (320kbps)</span><br></a>
+	    <iframe class="yeah" style="width:230px;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url=https://www.youtube.com/watch?v={{video.id}}&f=mp3"></iframe>
+
+{% endfor %}
+
+    </div>
+	 <style type="text/css">
+        @media screen and (max-width: 600px) {
+        .yeah {
+            width: 100%
+        }
+        }
+    @media screen and (max-width: 400px) {
+            .yeah {
+                width: 100%
+            }
+            }
+</style>
+<div id="SC_TBlock_763765" class="SC_TBlock">loading...</div> 
+  </section>
+        <!-- Banner-Starts-Here -->
+<style type="text/css">
+    	@media screen and (max-width: 600px) {
+		.audioplayer {
+			width: 100%
+		}
+		}
+	@media screen and (max-width: 400px) {
+			.audioplayer {
+				width: 100%
+			}
+			}
+        @media screen and (max-width: 600px) {
+        .yo {
+            width: 100%
+        }
+        }
+    @media screen and (max-width: 400px) {
+            .yo {
+                width: 100%
+            }
+            }
+</style>
+ 
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+<script type="text/javascript">
+  (sc_adv_out = window.sc_adv_out || []).push({
+    id : "763765",
+    domain : "n.ads5-adnow.com"
+  });
+</script>
+<script type="text/javascript" src="//st-n.ads5-adnow.com/js/a.js" async></script>
+<!-- //Body-Ends-Here -->
+</body>
+</html>
+

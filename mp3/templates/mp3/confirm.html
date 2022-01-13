@@ -1,0 +1,67 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -8%; margin-bottom: -top: -8%;">
+	<a href="#" style=" font-style: Cambria; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+      <div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <form action="" method="POST">
+      {% csrf_token %}
+    <p class="card-text">are you sure you want to delete "{{song}}"</p>
+    <a href="{% url 'home' %}">
+    <input class="btn btn-primary" type="submit" name="submit">
+
+    </form>
+     </div>
+  <div class="card-footer text-muted">
+    mp3kings.com song
+  </div>
+</div>
+  </section>
+        <!-- Banner-Starts-Here -->
+
+
+
+
+ 
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+ 
+        
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>

@@ -1,0 +1,61 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -7%; margin-bottom: -top: -12%;">
+	<a href="#" style=" font-style: times; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+    
+
+    <div class="container">
+      <h1><b>Privacy Policy</b></h1>
+      <p>mp3kings.nett doesn't track you or store any of your inputs on the site,What you search for is your own business and we’d like to keep it that way. That’s why we don’t collect any personal information and therefore, have none to share</p>
+
+      <h2><b>Disclaimer</b></h2>
+      <p>mp3kings.net does not claim ownership of any of the songs that we upload and any copyright infringement complaints will be executed immediately!</p><br>
+
+      <p>If you feel any of our uploads infringes on your copyright, kindly contact us and we will take down the content immediately.  It is our policy to honor all take-down requests!</p>
+
+</div>
+  </section>
+        <!-- Banner-Starts-Here -->
+
+
+
+
+ 
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+ 
+        
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>

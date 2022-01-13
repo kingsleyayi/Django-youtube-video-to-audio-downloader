@@ -1,0 +1,153 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -8%; margin-bottom: -top: -8%;">
+	<a href="#" style=" font-style: Cambria; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+  	<a href="{% url 'Logout' %}"  class="btn btn-primary  btn-sm btn-info">Logout</a>
+     <a class="btn btn-primary  btn-sm btn-info" href="{% url 'Messages' %}">messages</a>
+     <a class="btn btn-primary  btn-sm btn-info" href="{% url 'DeleteSong' %}">delete song</a>
+    <div class="container">
+  <p>{{done}}</p>
+	    <p>{{alert}}</p>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{formset.management_form}}
+	{% for form in formset %}
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="color: black">Name</label>
+      </div>
+      <div class="col-75">
+       {{form.name}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label style="color: black" for="lname">year</label>
+      </div>
+      <div class="col-75">
+        {{form.year}}
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-25">
+        <label style="color: black" for="lname">artist</label>
+      </div>
+      <div class="col-75">
+        {{form.artist}}
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-25">
+        <label style="color: black" for="lname">audio</label>
+      </div>
+      <div class="col-75">
+        {{form.audio}}
+      </div>
+    </div><br><br>
+     {% endfor %}
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+</div>
+  </section>
+
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+<style type="text/css">
+  /* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=email], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: skyblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>

@@ -1,0 +1,148 @@
+{% load static %}
+{% include 'mp3/head.html' %}
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<section class="jumbotron text-center" style="background: none; margin-bottom: -7%; margin-bottom: -top: -12%;">
+	<a href="#" style=" font-style: times; background: none; color: white;"><h1><b>MP3KINGS</b></h1></a>
+</section>
+<div class="page">
+
+    <div class="container">
+          {% include 'mp3/navbar.html' %}
+  <section class="jumbotron text-center">
+    
+
+    <div class="container">
+      <h1><b>About us</b></h1>
+      <p>mp3kings.com is a music downloading website for downloading songs of all genres,year or country.mp3kings.com allows user download top sound quality available without a loss in sound quality</p>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/p.png' %}" alt="privacy img" style="width:100%">
+      <div class="container">
+        <h2>Real Privacy</h2>
+        <p class="title">We don’t track you.</p>
+        <p>What you search for is your own business and we’d like to keep it that way. That’s why we don’t collect any personal information and therefore, have none to share.</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="{% static 'images/mp3.png' %}" alt="privacy img" style="width:100%">
+      <div class="container">
+        <h2>Mission</h2>
+        <p class="title">Our mission is very simple:</p>
+        <p>We provide high qualty sounds with the aim of entertaining passoniate audience.We aim to become the biggest Nigerian music Hub and Music Download website</p>
+      </div>
+    </div>
+  </div>
+
+      <div class="column">
+    <div class="card">
+      <img src="{% static 'images/dis.png' %}" alt="privacy img" style="width:100%">
+      <div class="container">
+        <h2>Disclaimer</h2>
+        <p class="title">disclaimer:</p>
+        <p>mp3kings.net does not claim ownership of any of the songs that we upload and any copyright infringement complaints will be executed immediately!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </section>
+        <!-- Banner-Starts-Here -->
+
+
+
+
+ 
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+ 
+        
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+{% include 'mp3/footer.html' %}
+
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+
+</div>
+<style type="text/css">
+  .column {
+  float: right;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+<!-- //Body-Ends-Here -->
+
+</body>
+</html>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/audioplayer.js' %}"></script>
+<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
