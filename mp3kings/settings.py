@@ -159,17 +159,17 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/audio")
 
 
-YOUTUBE_DATA_API_5KEY = 'AIzaSyB7koPXShz0g4bLVRzHYCAjHGz_Cpo7PKA'
-YOUTUBE_DATA_API_4KEY = 'AIzaSyDELZMEXenPciCkmkA8fcy4Z22IkB9mg4s'
+YOUTUBE_DATA_API_5KEY = 'your youtube data api key'
+YOUTUBE_DATA_API_4KEY = 'your youtube data api key'
 
-YOUTUBE_DATA_API_6KEY = 'AIzaSyA43teion_6zLrMIgT7u0uTJtuRleyXfRM'
-YOUTUBE_DATA_API_7KEY = 'AIzaSyAEof_DxJp7FfIfGPpc5NxMa9Qgbw2krJE'
+YOUTUBE_DATA_API_6KEY = 'your youtube data api key'
+YOUTUBE_DATA_API_7KEY = 'your youtube data api key'
 
-YOUTUBE_DATA_API_1KEY = 'AIzaSyCryotseJOMZWcWTIpjsopnqji9X77ljAo'
-YOUTUBE_DATA_API_2KEY = 'AIzaSyBvdryqh34_emCw_a8r-YsQXzAQL3Zfxik'
+YOUTUBE_DATA_API_1KEY = 'your youtube data api key'
+YOUTUBE_DATA_API_2KEY = 'your youtube data api key'
 
-YOUTUBE_DATA_API_3KEY = 'AIzaSyBfBcDg02S9vlMH7uGEYX9ylnfgaA2wTxg'
-YOUTUBE_DATA_API_KEY = 'AIzaSyBIHqqdUl81x38StOLYxxPjh6JfCAGYYdI'
+YOUTUBE_DATA_API_3KEY = 'your youtube data api key'
+YOUTUBE_DATA_API_KEY = 'your youtube data api key'
 
 
 
