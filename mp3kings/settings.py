@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'mp3kings.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mp3kings',
-        'USER': 'mp3kings',
-        'PASSWORD': 'delm123456',
-        'HOST': 'database-1.cttzpnpkedsz.us-east-2.rds.amazonaws.com',
-        'PORT': '5432'
+        'NAME': 'name',
+        'USER': 'user',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': ''
     }
 }
 '''
